@@ -12,19 +12,19 @@ public class CarServiceImp implements CarService{
     private CarDao carDao;
 
 
-    @Transactional
+    @Transactional(readOnly = true)
     @Override
     public Car getCarBySeries(int series) {
         return carDao.getCarBySeries(series);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     @Override
     public Car getCarByModel(String model) {
         return carDao.getCarByModel(model);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     @Override
     public Car getCarByModelAndSeries(String model, int series) {
         return carDao.getCarByModelAndSeries(model, series);
