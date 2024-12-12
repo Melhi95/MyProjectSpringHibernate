@@ -25,6 +25,7 @@ public class User {
     @Column(name = "last_name")
     private String lastName;
 
+    @Column
     private String email;
 
     @OneToOne(cascade = CascadeType.ALL)
