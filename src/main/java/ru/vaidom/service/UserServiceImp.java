@@ -1,6 +1,6 @@
 package ru.vaidom.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.vaidom.dao.UserDao;
@@ -8,11 +8,12 @@ import ru.vaidom.model.User;
 
 import java.util.List;
 
+@RequiredArgsConstructor
+
 @Service
 public class UserServiceImp implements UserService {
 
-    @Autowired
-    private UserDao userDao;
+    private final UserDao userDao;
 
     @Transactional
     @Override

@@ -1,16 +1,17 @@
 package ru.vaidom.dao;
 
+import lombok.RequiredArgsConstructor;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import ru.vaidom.model.Car;
+
+@RequiredArgsConstructor
 
 @Repository
 public class CarDaoImp implements CarDao {
 
-    @Autowired
-    private SessionFactory sessionFactory;
+    private final SessionFactory sessionFactory;
 
     @Override
     public Car getCarBySeries(int series) {
