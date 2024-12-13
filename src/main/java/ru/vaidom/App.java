@@ -42,14 +42,13 @@ public class App {
                         .email("salat@gmail.com")
                         .car(Car.builder()
                                 .model("Конь")
-                                .series(001)
+                                .series(1)
                                 .build())
                         .build());
 
         for (User user : userService.getUsers()) {
             System.out.println(user);
         }
-
 
         System.out.println();
         System.out.println(carService.getCarByModel("Конь").getUser());

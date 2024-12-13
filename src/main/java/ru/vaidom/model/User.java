@@ -7,6 +7,8 @@ import lombok.*;
 @AllArgsConstructor
 @Setter
 @Getter
+@ToString
+@EqualsAndHashCode
 @Builder
 
 @Entity
@@ -23,20 +25,9 @@ public class User {
     @Column(name = "last_name")
     private String lastName;
 
-    @Column(name = "email")
+    @Column
     private String email;
 
     @OneToOne(cascade = CascadeType.ALL)
     private Car car;
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", car=" + car +
-                '}';
-    }
 }
