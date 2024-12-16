@@ -1,0 +1,4 @@
+FROM mysql
+LABEL authors="Bardak"
+ENV MYSQL_ROOT_PASSWORD=root
+ENV MYSQL_DATABASE=testdb

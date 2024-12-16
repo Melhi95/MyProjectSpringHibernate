@@ -51,7 +51,6 @@ public class AppConfig {
 
     @Bean
     public HibernateTransactionManager transactionManager() {
-        String s = "f";
         HibernateTransactionManager transactionManager = new HibernateTransactionManager();
         transactionManager.setSessionFactory(getSessionFactory().getObject());
         return transactionManager;
